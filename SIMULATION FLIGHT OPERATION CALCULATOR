@@ -1,0 +1,55 @@
+print("SELAMAT DATANG DI PROGRAM\nSIMULATION FLIGHT OPERATION CALCULATOR")
+
+pax = float(input("\nMasukan pax dalam orang: "))
+bag = float(input("\nMasukan bag dalam kg: "))
+cargo = float(input("\nMasukan cargo dalam kg: "))
+mail = float(input("\nMasukan mail dalam kg: "))
+taxi_fuel = float(input("\nMasukan taxi_fuel dalam kg: "))
+trip_fuel = float(input("\nMasukan trip_fuel dalam kg: "))
+block_fuel = float(input("\nMasukan block_fuel dalam kg: "))
+dow = float(input("\nMasukan dow dalam kg: "))
+
+def hitung(pax,bag,cargo,mail,taxi_fuel,trip_fuel,block_fuel,dow, pilihan):
+  if pilihan == "1":
+    payload = (pax * 70) + bag + cargo + mail
+    print("\nJumlah payload adalah: ",payload, "kg")
+  elif pilihan == "2":
+    zfw = dow + (pax * 70) + bag + cargo + mail
+    print("\nTotal zfw adalah: ",dow, "kg")
+  elif pilihan == "3":
+    tof = block_fuel - taxi_fuel
+    print("\nTotal tof adalah: ",tof, "kg")
+  elif pilihan == "4":
+    tow = (dow + (pax * 70) + bag + cargo + mail) - (block_fuel - taxi_fuel)
+    print("\nTotal tow adalah: ",tow, "kg")
+  elif pilihan == "5":
+    lw = (dow + (pax * 70) + bag + cargo + mail) - (block_fuel - taxi_fuel) - trip_fuel
+    print("\nTotal tow adalah: ",lw, "kg")
+  else:
+    print("\nMaaf, pilihan tidak tersedia")
+
+print("\nPilih 1 untuk menghitung payload\nPilih 2 untuk menghitung zfw\nPilih 3 untuk mengitung tof\nPilih 4 untuk mengitung tow\nPilih 5 untuk mengitung lw")
+pilihan = input("\nInput pilihan: ")
+
+hitung(pax,bag,cargo,mail,taxi_fuel,trip_fuel,block_fuel,dow, pilihan)
+
+print("\nPilih 1 untuk menghitung payload\nPilih 2 untuk menghitung zfw\nPilih 3 untuk mengitung tof\nPilih 4 untuk mengitung tow\nPilih 5 untuk mengitung lw")
+pilihan = input("\nInput pilihan: ")
+
+hitung(pax,bag,cargo,mail,taxi_fuel,trip_fuel,block_fuel,dow, pilihan)
+
+print("\nPilih 1 untuk menghitung payload\nPilih 2 untuk menghitung zfw\nPilih 3 untuk mengitung tof\nPilih 4 untuk mengitung tow\nPilih 5 untuk mengitung lw")
+pilihan = input("\nInput pilihan: ")
+
+hitung(pax,bag,cargo,mail,taxi_fuel,trip_fuel,block_fuel,dow, pilihan)
+
+print("\nPilih 1 untuk menghitung payload\nPilih 2 untuk menghitung zfw\nPilih 3 untuk mengitung tof\nPilih 4 untuk mengitung tow\nPilih 5 untuk mengitung lw")
+pilihan = input("\nInput pilihan: ")
+
+hitung(pax,bag,cargo,mail,taxi_fuel,trip_fuel,block_fuel,dow, pilihan)
+
+print("\nPilih 1 untuk menghitung payload\nPilih 2 untuk menghitung zfw\nPilih 3 untuk mengitung tof\nPilih 4 untuk mengitung tow\nPilih 5 untuk mengitung lw")
+pilihan = input("\nInput pilihan: ")
+
+hitung(pax,bag,cargo,mail,taxi_fuel,trip_fuel,block_fuel,dow, pilihan)
+print("\nTerimakasih telah menggunakan program ini.")
